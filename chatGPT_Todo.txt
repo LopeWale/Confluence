@@ -1,0 +1,89 @@
+The Atlassian Confluence REST API is a tool that allows for programmatic interaction with Confluence. It utilizes HTTP methods such as GET, PUT, POST, and DELETE for this interaction. The data that the API returns is in the JSON format.
+
+The REST URIs in this API have a specific structure. Here are the formats:
+
+When used with context: http://host:port/context/rest/api/resource-name
+When used without context: http://host:port/rest/api/resource-name
+For instance:
+
+With context: http://example.com:8080/confluence/rest/api/space/ds
+Without context: http://confluence.myhost.com:8095/rest/api/space/ds
+The API employs a technique known as expansion to reduce network traffic. The expand query parameter can be used to specify a list of entities (separated by commas) that you want to be expanded.
+
+
+"To build a script that integrates this API and returns blogs in your assigned spaces, you would need to:
+
+Identify the specific API endpoints that allow you to access the blogs in your assigned spaces.
+Send an HTTP request to these endpoints.
+Parse the JSON response to extract the blog data.
+Let's break down these steps:
+
+Identify the API endpoints:
+
+You would need to refer to the API documentation to find the specific endpoints that allow you to access the blogs in your assigned spaces.
+Send an HTTP request:
+
+You can use libraries like requests in Python to send HTTP requests. The type of request (GET, POST, etc.) would depend on the API endpoint.
+Parse the JSON response:
+
+Once you receive the response from the API, you can parse it using JSON parsing libraries to extract the blog data."
+
+To construct a script that integrates the API and fetches blogs from your designated spaces, you would need to follow these steps:
+
+Start by pinpointing the specific API endpoints that provide access to the blogs in your designated spaces. This information can be located in the API documentation.
+
+To fetch the blogs, you'll need to send an HTTP request to the identified API endpoints. Libraries such as 'requests' in Python can be used to facilitate this process. The type of request (GET, POST, etc.) will be dictated by the specific API endpoint.
+
+Once the API response is received, it's necessary to parse the JSON data. JSON parsing libraries can be used to extract the relevant blog information from the response.
+
+By adhering to these steps, you'll be able to successfully construct a script that integrates the API and fetches the blogs from your designated spaces.
+
+Here's a detailed breakdown of the tasks you need to accomplish:
+
+Develop a Python class that establishes a connection to an API endpoint and acts as a data connection for an AI LLM model training data source. The API should be capable of performing a keyword search that returns the search results of blog titles, enabling the request of specific blogs.
+
+Pinpoint the exact API endpoints that provide access to the blogs within your assigned spaces.
+
+Dispatch an HTTP request to these API endpoints using a library like requests in Python. The type of request (GET, POST, etc.) will be contingent on the specific API endpoint.
+
+Parse the JSON response received from the API to extract the pertinent blog data. Use JSON parsing libraries to effectively extract the blog data from the response.
+
+Implement authentication, manage pagination, and expand certain entities as necessary.
+
+Design a function that presents the extracted blog data in a readable format such as txt or JSON, excluding any non-blog data.
+
+Develop a function that allows a user to connect to a MySQL database, which will facilitate the accomplishment of the subsequent task.
+
+Establish a MySQL database that will serve as a storage space for the meta data and any suggested fields that may be useful in addition to the blog.
+
+Now, let's break down these tasks into actionable steps and save them to a text file named "chatGPT_Todo.txt".
+
+Here's the breakdown of the tasks into actionable steps:
+
+Develop a Python class for API connection
+
+Write the initial version of the class with basic functionality
+Implement a method for connecting to the API endpoint
+Implement a method for keyword search that returns blog titles
+Identify API endpoints
+
+Go through the API documentation
+Identify the endpoints that allow access to the blogs in your assigned spaces
+Send HTTP requests
+
+Write a function to send HTTP requests to the identified endpoints
+Parse JSON response
+
+Write a function to parse the JSON response and extract blog data
+Handle authentication and pagination
+
+Update your Python class to handle authentication and pagination
+Create a function for data presentation
+
+Write a function that takes the parsed blog data and presents it in a readable format (txt or JSON)
+Develop a function for MySQL connection
+
+Write a function that allows a user to connect to a MySQL database
+Create a MySQL database
+
+Create a database that will store the meta data and any suggested fields
